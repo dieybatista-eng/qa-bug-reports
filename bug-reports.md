@@ -2,10 +2,11 @@
 
 ---
 
-## BUG-01 - Invalid password message validation issue
+# Bug Reports
 
-Tool:
-Jira (simulated)
+---
+
+## BUG-01 - Invalid password error message
 
 Environment:
 Chrome / Windows
@@ -17,10 +18,10 @@ Steps to Reproduce:
 4. Click login
 
 Expected Result:
-System should display clear and consistent error message
+System should display a clear and user-friendly error message
 
 Actual Result:
-Error message displayed is inconsistent or unclear
+Error message displayed: "Epic sadface: Username and password do not match any user in this service"
 
 Severity:
 Medium
@@ -33,59 +34,54 @@ See evidence/bug-invalid-password.png
 
 ---
 
-## BUG-02 - Login error message layout issue
-
-Tool:
-Jira (simulated)
+## BUG-02 - Login blocked user feedback issue
 
 Environment:
 Chrome / Windows
 
 Steps to Reproduce:
 1. Access login page
-2. Enter invalid credentials
-3. Click login
+2. Enter username "locked_out_user"
+3. Enter password "secret_sauce"
+4. Click login
 
 Expected Result:
-Error message should be properly aligned and readable
+System should clearly inform that the user is blocked and provide proper guidance
 
 Actual Result:
-UI layout issue observed in error message
+User is blocked with a generic message that may not provide sufficient context or guidance
 
 Severity:
-Low
+Medium
 
 Priority:
 Medium
 
 Evidence:
-See evidence/bug-error-layout.png
+See evidence/bug-locked-user.png
 
 ---
 
-## BUG-03 - Slow response on login error feedback
-
-Tool:
-Jira (simulated)
+## BUG-03 - Product not properly added to cart for specific user
 
 Environment:
 Chrome / Windows
 
 Steps to Reproduce:
-1. Enter invalid login
-2. Click login
+1. Login with user "problem_user"
+2. Click "Add to cart" on a product
 
 Expected Result:
-Immediate feedback to user
+Product should be added to cart and visible in cart icon
 
 Actual Result:
-Delay before error message appears
+Product behavior is inconsistent (cart does not update correctly or UI behaves unexpectedly)
 
 Severity:
-Low
+High
 
 Priority:
 Medium
 
 Evidence:
-See evidence/bug-delay.png
+See evidence/bug-product-cart.png
